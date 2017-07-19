@@ -28,7 +28,7 @@ exports.message = (event) => {
         break;
       case 'cappuccino':
         send.textMessage(senderID,
-          'Sorry, we do not serve that, would you like to try black coffee?');
+          'Sorry, we do not serve that, would you like to try some other flavour?');
         break;
       case 'black coffee':
         send.textMessage(senderID,
