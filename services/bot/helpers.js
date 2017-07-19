@@ -1,3 +1,5 @@
+const request = require('request');
+
 exports.callSendApi = (messageData) => {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
