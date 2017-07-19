@@ -23,7 +23,17 @@ exports.message = (event) => {
       case 'generic':
         send.genericMessage(senderID);
         break;
-
+      case 'I need coffee':
+        send.textMessage(senderID, 'Sure sir, which flavours?');
+        break;
+      case 'cappuccino':
+        send.textMessage(senderID,
+          'Sorry, we do not serve that, would you try black coffee?');
+        break;
+      case 'yeah':
+        send.textMessage(senderID,
+          'OOOYYEEEEE, chal nikal, tairy nokar laggyy aannnnn!!!');
+        break;
       default:
         send.textMessage(senderID, messageText);
     }
