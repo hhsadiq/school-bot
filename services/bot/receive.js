@@ -24,11 +24,11 @@ exports.message = (event) => {
         send.genericMessage(senderID);
         break;
       case 'I need coffee':
-        send.textMessage(senderID, 'Sure sir, which flavours?');
+        send.textMessage(senderID, 'Sure sir, which flavour?');
         break;
       case 'cappuccino':
         send.textMessage(senderID,
-          'Sorry, we do not serve that, would you try black coffee?');
+          'Sorry, we do not serve that, would you like to try black coffee?');
         break;
       case 'black coffee':
         send.textMessage(senderID,
