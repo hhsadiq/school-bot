@@ -30,6 +30,10 @@ exports.message = (event) => {
         send.textMessage(senderID,
           'Sorry, we do not serve that, would you try black coffee?');
         break;
+      case 'black coffee':
+        send.textMessage(senderID,
+          'Here you go sir, take this fresh cup of coffee');
+        break;
       default:
         send.textMessage(senderID, messageText);
     }
