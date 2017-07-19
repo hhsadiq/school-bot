@@ -3,7 +3,7 @@ const request = require('request');
 exports.callSendApi = (messageData) => {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: PAGE_ACCESS_TOKEN },
+    qs: { access_token: process.env.FACEBOOK_PAGE_ACCESS_TOKEN },
     method: 'POST',
     json: messageData
 
