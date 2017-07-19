@@ -1,3 +1,5 @@
+const send = require('./send');
+
 exports.message = (event) => {
   const senderID = event.sender.id;
   const recipientID = event.recipient.id;
@@ -19,14 +21,14 @@ exports.message = (event) => {
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
       case 'generic':
-        sendGenericMessage(senderID);
+        send.genericMessage(senderID);
         break;
 
       default:
-        sendTextMessage(senderID, messageText);
+        send.textMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
-    sendTextMessage(senderID, "Message with attachment received");
+    send.textMessage(senderID, "Message with attachment received");
   }
 
 };
