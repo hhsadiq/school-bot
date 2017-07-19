@@ -30,6 +30,8 @@ exports.handleMessages = (req, res) => {
       entry.messaging.forEach(function(event) {
         if (event.message) {
           botService.receive.message(event);
+        } else if (event.postback) {
+          botService.receive.postBack(event);
         } else {
           console.log("Webhook received unknown event: ", event);
         }
